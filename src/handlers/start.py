@@ -17,6 +17,6 @@ async def start(message: Message, state: FSMContext):
     await state.clear()
 
     await message.answer(
-        message_constants.welcome_message + "\nВыберите действие:",
+        message_constants.Messages.get_welcome_message(user_id) + "\nВыберите действие:",
         reply_markup=InlineKeyboards.main_menu(user_id)
     )

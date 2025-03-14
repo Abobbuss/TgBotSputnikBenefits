@@ -18,5 +18,5 @@ async def start_registration(callback: CallbackQuery, state: FSMContext):
     update_registration_step(user_id, "Нажали на получение льгот")
 
     await callback.message.answer(
-        "Сервис будет разработан позднее:",
+        "Сейчас список льгот недоступен, поэтому оплата невозможна.",
         reply_markup=InlineKeyboards.main_menu(user_id))

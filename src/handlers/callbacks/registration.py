@@ -71,7 +71,7 @@ async def process_children_count(callback: CallbackQuery, state: FSMContext):
 
         await state.clear()
         await callback.message.answer(
-            "Регистрация завершена! Теперь вы можете узнать, какие льготы вам доступны.",
+            "Регистрация завершена! Теперь вы можете оплатить 300 рублей и узнать, какие льготы вам доступны.",
             reply_markup=InlineKeyboards.main_menu(user_id)
         )
 
@@ -93,6 +93,6 @@ async def process_children_ages(message: Message, state: FSMContext):
 
     await state.clear()
     await message.answer(
-        "Регистрация завершена! Теперь вы можете узнать, какие льготы вам доступны.",
+        "Регистрация завершена! Теперь вы можете оплатить 300 рублей и узнать, какие льготы вам доступны.",
         reply_markup=InlineKeyboards.main_menu(user_id)
     )

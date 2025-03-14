@@ -12,7 +12,7 @@ class InlineKeyboards:
 
         buttons = []
         if is_registered:
-            buttons.append([InlineKeyboardButton(text="Узнать льготы", callback_data="check_benefits")])
+            buttons.append([InlineKeyboardButton(text="Оплатить и получить список льгот", callback_data="check_benefits")])
         else:
             buttons.append([InlineKeyboardButton(text="Начать", callback_data="start_registration")])
 
@@ -45,6 +45,6 @@ class InlineKeyboards:
         return InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text=str(i), callback_data=f"children_{i}")]
-                for i in range(1, 10)
+                for i in range(10)
             ]
         )
